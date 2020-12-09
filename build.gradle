@@ -1,0 +1,60 @@
+plugins {
+    id 'java'
+    // 替换了 gradle 内置的依赖管理，能利用 spring 项目本身的 maven 依赖文件
+    id 'io.spring.dependency-management' version '1.0.7.RELEASE'
+//    id 'war'
+    id 'idea'
+}
+
+group = 'kybmig'
+version = '1.0'
+sourceCompatibility = '11'
+
+jar {
+    manifest {
+        // 主函数入口
+        attributes 'Main-Class': 'guaMVC.Server'
+    }
+
+    from {
+        // 收集依赖代码
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+// 编译输出能显示中文
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
+repositories {
+    maven { url 'https://maven.aliyun.com/repository/public/' }
+    mavenCentral()
+}
+
+configurations {
+    // 编译后热更新配置
+    developmentOnly
+    runtimeClasspath {
+        extendsFrom developmentOnly
+    }
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.freemarker/freemarker
+    compile group: 'org.freemarker', name: 'freemarker', version: '2.3.30'
+    compile group: 'com.alibaba', name: 'fastjson', version: '1.2.70'
+
+    // 现在都用 implementation， compile 被弃用了
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+
+// 让 idea 的输出目录和 gradle 一致，这样 idea 运行的时候就能利用 gradle 的编译。加速编译和运行速度。
+idea{
+    module{
+        inheritOutputDirs = false
+        outputDir = compileJava.destinationDir
+        testOutputDir = compileTestJava.destinationDir
+    }
+}
+

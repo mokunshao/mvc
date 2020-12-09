@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <!-- meta charset 指定了页面编码, 否则中文会乱码 -->
+        <meta charset="utf-8">
+        <!-- title 是浏览器显示的页面标题 -->
+        <title>Todo 程序</title>
+    </head>
+    <body>
+        <h1>Todo</h1>
+
+        <form action="/todo/add" method="post">
+            <input name="content"  placeholder="请输入 todo" />
+            <br>
+            <button type="submit">POST 提交</button>
+        </form>
+
+        <div>
+            {todos}
+
+        </div>
+    </body>
+</html>
