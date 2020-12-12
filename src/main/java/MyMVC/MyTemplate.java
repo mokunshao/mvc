@@ -1,4 +1,4 @@
-package guaMVC;
+package MyMVC;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;
@@ -7,7 +7,7 @@ import freemarker.template.TemplateExceptionHandler;
 
 import java.io.*;
 
-public class GuaTemplate {
+public class MyTemplate {
     static Configuration config;
     //
     static {

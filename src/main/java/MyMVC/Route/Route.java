@@ -1,16 +1,15 @@
-package guaMVC.Route;
+package MyMVC.Route;
 
-import guaMVC.GuaTemplate;
-import guaMVC.Request;
-import guaMVC.Utility;
-import guaMVC.models.Message;
-import guaMVC.models.Session;
-import guaMVC.models.User;
-import guaMVC.service.MessageService;
-import guaMVC.service.SessionService;
-import guaMVC.service.UserService;
+import MyMVC.MyTemplate;
+import MyMVC.Request;
+import MyMVC.Utility;
+import MyMVC.models.Message;
+import MyMVC.models.Session;
+import MyMVC.models.User;
+import MyMVC.service.MessageService;
+import MyMVC.service.SessionService;
+import MyMVC.service.UserService;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
@@ -102,7 +101,7 @@ public class Route {
         Utility.log("messageList: %s", messageList);
         HashMap<String, Object> d = new HashMap<>();
         d.put("messgeList", messageList);
-        String body = GuaTemplate.render(d, "html_basic.ftl");
+        String body = MyTemplate.render(d, "html_basic.ftl");
       
         String header = "HTTP/1.1 200 very OK\r\nContent-Type: text/html;\r\n\r\n";
         String response = header + body;

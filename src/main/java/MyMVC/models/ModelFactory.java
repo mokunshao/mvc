@@ -1,6 +1,6 @@
-package guaMVC.models;
+package MyMVC.models;
 
-import guaMVC.Utility;
+import MyMVC.Utility;
 
 import java.util.ArrayList;
 import java.util.Arrays;

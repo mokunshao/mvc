@@ -1,27 +1,24 @@
-package guaMVC;
+package MyMVC;
 
-import guaMVC.Route.RoutTodo;
-import guaMVC.Route.Route;
-import guaMVC.Route.RouteAjaxTodo;
-import guaMVC.Route.RouteUser;
-import guaMVC.models.Message;
-import guaMVC.service.MessageService;
+import MyMVC.Route.RoutTodo;
+import MyMVC.Route.Route;
+import MyMVC.Route.RouteAjaxTodo;
+import MyMVC.Route.RouteUser;
 
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.function.Function;
 
-class GuaServlet implements Runnable {
+class MyServlet implements Runnable {
     Request request;
     Socket connection;
 
 
-    public GuaServlet(Socket connection, Request request) {
+    public MyServlet(Socket connection, Request request) {
         this.connection = connection;
         this.request = request;
     }
@@ -91,7 +88,7 @@ public class Server {
                         // 解析 request 得到 path
                         Request r = new Request(request);
 
-                        GuaServlet servlet = new GuaServlet(socket, r);
+                        MyServlet servlet = new MyServlet(socket, r);
                         Thread t = new Thread(servlet);
                         pool.execute(t);
 

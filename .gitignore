@@ -33,3 +33,5 @@ out/
 
 
 gradle
+
+.DS_Store

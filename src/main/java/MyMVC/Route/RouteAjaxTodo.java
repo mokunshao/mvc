@@ -1,12 +1,12 @@
-package guaMVC.Route;
+package MyMVC.Route;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import guaMVC.GuaTemplate;
-import guaMVC.Request;
-import guaMVC.Utility;
-import guaMVC.models.Todo;
-import guaMVC.service.TodoService;
+import MyMVC.MyTemplate;
+import MyMVC.Request;
+import MyMVC.Utility;
+import MyMVC.models.Todo;
+import MyMVC.service.TodoService;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -25,7 +25,7 @@ public class RouteAjaxTodo {
 
     public static byte[] indexView(Request request) {
         HashMap<String, Object> d = new HashMap<>();
-        String body = GuaTemplate.render(d, "ajax_todo.ftl");
+        String body = MyTemplate.render(d, "ajax_todo.ftl");
 
 
         HashMap<String, String> header = new HashMap<>();

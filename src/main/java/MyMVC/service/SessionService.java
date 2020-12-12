@@ -1,7 +1,7 @@
-package guaMVC.service;
+package MyMVC.service;
 
-import guaMVC.models.ModelFactory;
-import guaMVC.models.Session;
+import MyMVC.models.ModelFactory;
+import MyMVC.models.Session;
 
 import java.util.ArrayList;
 

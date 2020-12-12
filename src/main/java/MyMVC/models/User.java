@@ -1,4 +1,4 @@
-package guaMVC.models;
+package MyMVC.models;
 
 public class User {
     public Integer id;

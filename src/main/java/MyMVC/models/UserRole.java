@@ -1,4 +1,4 @@
-package guaMVC.models;
+package MyMVC.models;
 
 public enum UserRole {
     admin, normal, guest

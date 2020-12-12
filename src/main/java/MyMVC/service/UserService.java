@@ -1,8 +1,8 @@
-package guaMVC.service;
+package MyMVC.service;
 
-import guaMVC.models.ModelFactory;
-import guaMVC.models.User;
-import guaMVC.models.UserRole;
+import MyMVC.models.ModelFactory;
+import MyMVC.models.User;
+import MyMVC.models.UserRole;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package guaMVC.models;
+package MyMVC.models;
 
 import java.util.List;
 

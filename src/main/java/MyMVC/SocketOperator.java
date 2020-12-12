@@ -1,4 +1,4 @@
-package guaMVC;
+package MyMVC;
 
 import java.io.IOException;
 import java.io.InputStream;

@@ -1,10 +1,10 @@
-package guaMVC.Route;
+package MyMVC.Route;
 
-import guaMVC.Request;
-import guaMVC.Utility;
-import guaMVC.models.User;
-import guaMVC.service.SessionService;
-import guaMVC.service.UserService;
+import MyMVC.Request;
+import MyMVC.Utility;
+import MyMVC.models.User;
+import MyMVC.service.SessionService;
+import MyMVC.service.UserService;
 
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;

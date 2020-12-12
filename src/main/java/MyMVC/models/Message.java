@@ -1,4 +1,4 @@
-package guaMVC.models;
+package MyMVC.models;
 
 public class Message {
     public String author;

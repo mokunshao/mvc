@@ -1,8 +1,5 @@
-package guaMVC;
+package MyMVC;
 
-import jdk.jshell.execution.Util;
-
-import javax.swing.*;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;

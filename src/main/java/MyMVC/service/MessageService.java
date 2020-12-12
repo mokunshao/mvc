@@ -1,7 +1,7 @@
-package guaMVC.service;
+package MyMVC.service;
 
-import guaMVC.models.Message;
-import guaMVC.models.ModelFactory;
+import MyMVC.models.Message;
+import MyMVC.models.ModelFactory;
 
 import java.util.ArrayList;
 import java.util.HashMap;
